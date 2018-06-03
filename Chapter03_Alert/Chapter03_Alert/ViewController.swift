@@ -16,6 +16,11 @@ class ViewController: UIViewController {
         
         defaultPractice()
         mapPractice()
+        
+        listPractice()
+        
+        
+        
     }
     
     
@@ -104,8 +109,41 @@ class ViewController: UIViewController {
         
         
     }
+    
+    func listPractice() {
+        
+        let listBtn = UIButton(type: .system)
+        listBtn.frame = CGRect(x: 0, y: 300, width: 100, height: 30)
+        listBtn.center.x = self.view.center.x
+        listBtn.setTitle("List Alert", for: .normal)
+        listBtn.addTarget(self, action: #selector(listAlert), for: .touchUpInside)
+        
+        self.view.addSubview(listBtn)
+    }
+    
+    @objc func listAlert() {
+        
+        let contentVC = ListViewController()
+        let alert =  UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+        
+        alert.setValue(contentVC, forKey: "contentViewController")
+        
+        let okAction = UIAlertAction(title: "ok", style: .default, handler: nil)
+        let cancelAction = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
+        
+        alert.addAction(okAction)
+        alert.addAction(cancelAction)
+        
+        contentVC.delegate = self
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
 
-
+    
+    func didSelectRowAt(indexPath: IndexPath){
+        print(">>> 선택된 행은 \(indexPath.row)입니다")
+    }
 
 }
 
