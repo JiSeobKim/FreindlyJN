@@ -52,7 +52,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1992-08-12 19:01:30" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQ7-Fd-QdF">
                                             <rect key="frame" x="268" y="21" width="65" height="38"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="65" id="8aA-TQ-2hp"/>
+                                                <constraint firstAttribute="width" constant="65" id="RwH-OP-Apj"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <nil key="textColor"/>
@@ -61,15 +61,14 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="cQ7-Fd-QdF" firstAttribute="leading" secondItem="Maq-ap-ppw" secondAttribute="trailing" constant="10" id="BVc-k8-FPZ"/>
-                                        <constraint firstItem="cQ7-Fd-QdF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yxP-pP-ikh" secondAttribute="trailing" constant="8" symbolic="YES" id="FIe-eA-Nsi"/>
                                         <constraint firstItem="cQ7-Fd-QdF" firstAttribute="top" secondItem="NXS-mi-W5F" secondAttribute="topMargin" constant="10" id="LC4-U4-Jug"/>
+                                        <constraint firstItem="cQ7-Fd-QdF" firstAttribute="leading" secondItem="yxP-pP-ikh" secondAttribute="trailing" constant="10" id="Nkn-yy-INS"/>
                                         <constraint firstItem="Maq-ap-ppw" firstAttribute="leading" secondItem="NXS-mi-W5F" secondAttribute="leadingMargin" constant="10" id="PWJ-ee-Foo"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="cQ7-Fd-QdF" secondAttribute="bottom" constant="10" id="Pa4-4V-aOS"/>
                                         <constraint firstItem="yxP-pP-ikh" firstAttribute="leading" secondItem="NXS-mi-W5F" secondAttribute="leadingMargin" constant="10" id="R7M-M9-EgA"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="cQ7-Fd-QdF" secondAttribute="trailing" id="YxK-jf-Nbg"/>
                                         <constraint firstItem="yxP-pP-ikh" firstAttribute="top" secondItem="Maq-ap-ppw" secondAttribute="bottom" constant="5" id="oos-ob-5DK"/>
                                         <constraint firstItem="Maq-ap-ppw" firstAttribute="top" secondItem="NXS-mi-W5F" secondAttribute="topMargin" id="xRS-un-gNd"/>
-                                        <constraint firstItem="yxP-pP-ikh" firstAttribute="width" secondItem="Maq-ap-ppw" secondAttribute="width" id="yrV-EQ-q2H"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
