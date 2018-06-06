@@ -10,26 +10,41 @@ import UIKit
 
 class MemoListVC: UITableViewController {
     
+    var delegate : CustomRevealViewController?
+    let ad = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let revealVC = self.revealViewController(){
-            let btn = UIBarButtonItem()
-            btn.image = #imageLiteral(resourceName: "sidemenu")
-            btn.target = revealVC
-            btn.action = #selector(revealVC.revealToggle(_:))
-            
-            self.navigationItem.leftBarButtonItem = btn
-            
-            self.view.addGestureRecognizer(revealVC.panGestureRecognizer())
-        }
+        setNavigation()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.tableView.reloadData()
     }
     
-    let ad = UIApplication.shared.delegate as! AppDelegate
+    
+    func setNavigation() {
+        let sideBtn = UIBarButtonItem(image: UIImage(named: "sidemenu"), style: .plain, target: self, action: #selector(toggleSideBar(_:)))
+        
+        
+        self.navigationItem.title = "목록"
+        self.navigationItem.leftBarButtonItem = sideBtn
+    }
+    
+    
+    @objc func toggleSideBar(_ sender : UIBarButtonItem){
+        delegate?.toggleSideBar()
+        switch delegate!.isShowing {
+        case true:
+            delegate?.closeBar(complete: nil)
+        case false:
+            delegate?.openBar(complete: nil)
+        }
+    }
 
+    
+    
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         

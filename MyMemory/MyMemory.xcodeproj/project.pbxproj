@@ -19,9 +19,9 @@
 		6E47A6CA20A9D18A008D9685 /* MemoFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E47A6C920A9D18A008D9685 /* MemoFormVC.swift */; };
 		6E47A6CC20A9D20A008D9685 /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E47A6CB20A9D20A008D9685 /* MemoCell.swift */; };
 		6E47A6CE20A9D277008D9685 /* MemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E47A6CD20A9D277008D9685 /* MemoData.swift */; };
-		6E4CC68C20C41BC20002CD51 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4CC68A20C41BC20002CD51 /* SWRevealViewController.m */; };
 		6E4CC68E20C425F60002CD51 /* SideBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4CC68D20C425F60002CD51 /* SideBarVC.swift */; };
 		6E60E4DC20C6E87100FB81D3 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E60E4DB20C6E87100FB81D3 /* ProfileVC.swift */; };
+		6EBEDB3D20C76AB100C009A6 /* CustomRevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEDB3C20C76AB100C009A6 /* CustomRevealViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,11 +60,9 @@
 		6E47A6C920A9D18A008D9685 /* MemoFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoFormVC.swift; sourceTree = "<group>"; };
 		6E47A6CB20A9D20A008D9685 /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
 		6E47A6CD20A9D277008D9685 /* MemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoData.swift; sourceTree = "<group>"; };
-		6E4CC68920C41BC10002CD51 /* MyMemory-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyMemory-Bridging-Header.h"; sourceTree = "<group>"; };
-		6E4CC68A20C41BC20002CD51 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		6E4CC68B20C41BC20002CD51 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		6E4CC68D20C425F60002CD51 /* SideBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarVC.swift; sourceTree = "<group>"; };
 		6E60E4DB20C6E87100FB81D3 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		6EBEDB3C20C76AB100C009A6 /* CustomRevealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRevealViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,11 +113,12 @@
 		6E47A69320A9C2BB008D9685 /* MyMemory */ = {
 			isa = PBXGroup;
 			children = (
-				6E4CC68820C41B880002CD51 /* SWReveal */,
 				6E47A69420A9C2BB008D9685 /* AppDelegate.swift */,
+				6E4CC68D20C425F60002CD51 /* SideBarVC.swift */,
 				6E47A69620A9C2BB008D9685 /* MemoListVC.swift */,
 				6E47A6C520A9D108008D9685 /* MemoReadVC.swift */,
 				6E47A6C920A9D18A008D9685 /* MemoFormVC.swift */,
+				6EBEDB3C20C76AB100C009A6 /* CustomRevealViewController.swift */,
 				6E60E4DB20C6E87100FB81D3 /* ProfileVC.swift */,
 				6E47A69820A9C2BB008D9685 /* Main.storyboard */,
 				6E47A6CB20A9D20A008D9685 /* MemoCell.swift */,
@@ -148,17 +147,6 @@
 				6E47A6B920A9C2BD008D9685 /* Info.plist */,
 			);
 			path = MyMemoryUITests;
-			sourceTree = "<group>";
-		};
-		6E4CC68820C41B880002CD51 /* SWReveal */ = {
-			isa = PBXGroup;
-			children = (
-				6E4CC68B20C41BC20002CD51 /* SWRevealViewController.h */,
-				6E4CC68A20C41BC20002CD51 /* SWRevealViewController.m */,
-				6E4CC68920C41BC10002CD51 /* MyMemory-Bridging-Header.h */,
-				6E4CC68D20C425F60002CD51 /* SideBarVC.swift */,
-			);
-			path = SWReveal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,11 +283,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EBEDB3D20C76AB100C009A6 /* CustomRevealViewController.swift in Sources */,
 				6E60E4DC20C6E87100FB81D3 /* ProfileVC.swift in Sources */,
 				6E47A69D20A9C2BB008D9685 /* MyMemory.xcdatamodeld in Sources */,
 				6E47A6CA20A9D18A008D9685 /* MemoFormVC.swift in Sources */,
 				6E47A69720A9C2BB008D9685 /* MemoListVC.swift in Sources */,
-				6E4CC68C20C41BC20002CD51 /* SWRevealViewController.m in Sources */,
 				6E47A6CE20A9D277008D9685 /* MemoData.swift in Sources */,
 				6E47A6C620A9D108008D9685 /* MemoReadVC.swift in Sources */,
 				6E47A69520A9C2BB008D9685 /* AppDelegate.swift in Sources */,
@@ -488,7 +476,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.KJS.MyMemory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MyMemory/SWReveal/MyMemory-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -510,7 +498,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.KJS.MyMemory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MyMemory/SWReveal/MyMemory-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

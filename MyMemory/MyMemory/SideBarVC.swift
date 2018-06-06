@@ -18,6 +18,8 @@ class SideBarVC: UITableViewController {
     let emailLabel = UILabel()
     let profileImage = UIImageView()
     
+    var delegate : CustomRevealViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,6 +45,7 @@ class SideBarVC: UITableViewController {
         self.emailLabel.backgroundColor = .clear
         
         self.profileImage.image = #imageLiteral(resourceName: "account")
+        
         self.profileImage.frame = CGRect(x: 10, y: 10, width: 50, height: 50)
         
         headerView.addSubview(profileImage)
@@ -85,18 +88,34 @@ class SideBarVC: UITableViewController {
         switch indexPath.row {
         case 0:
             let uv = self.storyboard?.instantiateViewController(withIdentifier: "MemoForm")
+        
+            let parentView = self.parent as! CustomRevealViewController
+            let frontView = parentView.frontVC as! UINavigationController
             
-            let target = self.revealViewController().frontViewController as! UINavigationController
+            delegate?.closeBar(complete: {
+                frontView.pushViewController(uv!, animated: true)
+            }())
             
-            target.pushViewController(uv!, animated: true)
-            self.revealViewController().revealToggle(self)
             
-        case 5:
-            if let vc = self.storyboard?.instantiateViewController(withIdentifier: "_Profile") {
-                self.present(vc, animated: true) {
-                    self.revealViewController().revealToggle(self)
-                }
-            }
+            
+            
+            
+            
+            
+//
+//            let target = self.revealViewController().frontViewController as! UINavigationController
+//
+//
+//
+//            target.pushViewController(uv!, animated: true)
+//            self.revealViewController().revealToggle(self)
+            
+//        case 5:
+//            if let vc = self.storyboard?.instantiateViewController(withIdentifier: "_Profile") {
+//                self.present(vc, animated: true) {
+//                    self.revealViewController().revealToggle(self)
+//                }
+//            }
         default:
             break
         }
